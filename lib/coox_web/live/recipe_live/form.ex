@@ -89,6 +89,16 @@ defmodule CooxWeb.RecipeLive.Form do
         </div>
       </div>
 
+      <button
+        class="mt-4 text-zinc-700"
+        name="recipe[instructions_sort][]"
+        phx-click={JS.dispatch("change")}
+        type="button"
+        value="new"
+      >
+        <.icon name="hero-plus-circle" class="h-5 w-5 relative top-[-1px]" /> add more
+      </button>
+
       <:actions>
         <div class="flex">
           <.button phx-disable-with="Saving...">Save Recipe</.button>
