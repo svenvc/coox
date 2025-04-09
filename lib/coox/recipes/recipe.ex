@@ -33,7 +33,8 @@ defmodule Coox.Recipes.Recipe do
     )
     |> cast_embed(:instructions,
       with: &Instruction.changeset/2,
-      sort_param: :instructions_sort
+      sort_param: :instructions_sort,
+      drop_param: :instructions_drop
     )
   end
 end
